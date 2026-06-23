@@ -32,10 +32,10 @@ export const developpeurs: Developpeur[]= [
     },
     {
         nom: "Marva Lorene NSA",
-        specialite: "Developpeur Front-end",
-        outils: [],
-        image: "../assets/img/",
-        lienPortfolio: "",
+        specialite: "Developpeur Fullstack",
+        outils: ["HTML5", "CSS3", "JavaScript", "Figma", "TypeScript", "Vite", "GitHub", "Git", "Next.js", "Node.js", "React", "Vs code"],
+        image: "../assets/img/marva.png",
+        lienPortfolio: "https://github.com/marvansa428-dev/portfolio-marva.git",
     },
     {
         nom: "Christ Jordan OBIANG",
