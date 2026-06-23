@@ -1,5 +1,5 @@
 import "../src/assets/css/index.css";
-
+import { initTypedDomains } from "./ts/pages/home";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <header>
@@ -26,3 +26,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   </main>
   
 `;
+
+// FIN du innerHTML
+
+initTypedDomains();

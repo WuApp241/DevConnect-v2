@@ -12,7 +12,7 @@ export const developpeurs: Developpeur[]= [
     {
         nom: "Sterge Dorsel MBADINGA MBADINGA",
         specialite: "Developpeur Front-end",
-        outils: [],
+        outils: ["HTML", "CSS", "Figma", "Github", "JavaScript", "React", "VueJS", "NodeJS"],
         image: "../assets/img/sterge.png",
         lienPortfolio: "https://tonton-dxy.github.io/TontonDXY.github.io/",
     },
