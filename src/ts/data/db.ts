@@ -17,11 +17,11 @@ export const developpeurs: Developpeur[]= [
         lienPortfolio: "https://tonton-dxy.github.io/TontonDXY.github.io/",
     },
     {
-        nom: "Abdoul BAKARY",
-        specialite: "Developpeur Front-end",
-        outils: [],
-        image: "../assets/img/",
-        lienPortfolio: "",
+        nom: "BAKARY Abdoul WADOUD",
+        specialite: "Developpeur Fullstack",
+        outils: ["HTML", "CSS", "TypeScript", "Next.Js",  "Node.js", "ExpressJS", "Figma", "Github", "MySQL"],
+        image: "../assets/img/abdoul.png",
+        lienPortfolio: "https://abdoul-12.github.io/My-portfolio/",
     },
     {
         nom: "Dodge Elfry NGUIA",
