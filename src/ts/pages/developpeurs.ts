@@ -78,12 +78,39 @@ function buildCard(developpeur: Developpeur): string {
     </div>`;
 }
 
-function showDeveloppers(): void {
+function showDeveloppers(listeDeveloppeurs: Developpeur[] = developpeurs): void {
   const conteneur    = document.querySelector<HTMLElement>('#cards-container')!;
   
-  conteneur.innerHTML = Array.from(developpeurs)
+  conteneur.innerHTML = Array.from(listeDeveloppeurs)
     .map((developpeur: Developpeur) => buildCard(developpeur))
     .join('');
+}
+
+function normalizeSpecialite(specialite: string): string {
+  return specialite.toLowerCase().replace(/[\s-]/g, '');
+}
+
+function initFilters(): void {
+  const filtres = [
+    { selecteur: '.all-btn', specialite: '' },
+    { selecteur: '.Front-end-btn', specialite: 'frontend' },
+    { selecteur: '.Back-end-btn', specialite: 'backend' },
+    { selecteur: '.Full-stack-btn', specialite: 'fullstack' },
+  ];
+
+  filtres.forEach(({ selecteur, specialite }) => {
+    const bouton = document.querySelector<HTMLButtonElement>(selecteur);
+
+    bouton?.addEventListener('click', () => {
+      const listeDeveloppeurs = specialite
+        ? developpeurs.filter((developpeur: Developpeur) =>
+            normalizeSpecialite(developpeur.specialite).includes(specialite)
+          )
+        : developpeurs;
+
+      showDeveloppers(listeDeveloppeurs);
+    });
+  });
 }
 
 /*========================================
@@ -94,6 +121,7 @@ async function LoadingCards(): Promise<void> {
   showSkeleton();
   await new Promise<void>((resolve) => setTimeout(resolve, 1500));
   showDeveloppers();
+  initFilters();
 }
 
 LoadingCards();
