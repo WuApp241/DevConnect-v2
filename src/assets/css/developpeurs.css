@@ -91,7 +91,7 @@ svg:hover path {
    background-color: var(--color-bg);
 }
 
-.filter-btn:active, .filter-btn:focus {
+.filter-btn:active, .filter-btn:focus, .filter-btn.active {
    background-color: var(--color-bg-logo);
    color: var(--color-bg);
    font-weight: 500;
