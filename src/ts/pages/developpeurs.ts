@@ -91,6 +91,10 @@ function normalizeSpecialite(specialite: string): string {
 }
 
 function initFilters(): void {
+  const boutons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+
+  document.querySelector<HTMLButtonElement>('.all-btn')?.classList.add('active');
+
   const filtres = [
     { selecteur: '.all-btn', specialite: '' },
     { selecteur: '.Front-end-btn', specialite: 'frontend' },
@@ -102,6 +106,9 @@ function initFilters(): void {
     const bouton = document.querySelector<HTMLButtonElement>(selecteur);
 
     bouton?.addEventListener('click', () => {
+      boutons.forEach((element) => element.classList.remove('active'));
+      bouton.classList.add('active');
+
       const listeDeveloppeurs = specialite
         ? developpeurs.filter((developpeur: Developpeur) =>
             normalizeSpecialite(developpeur.specialite).includes(specialite)
@@ -125,3 +132,4 @@ async function LoadingCards(): Promise<void> {
 }
 
 LoadingCards();
+
