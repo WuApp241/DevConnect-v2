@@ -1,10 +1,11 @@
 import "../src/assets/css/index.css";
+import logoUrl from "./assets/img/custom-logo.svg";
 import { initTypedDomains } from "./ts/pages/home";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <header>
     <nav>
-      <img class="logo" src="./src/assets/img/custom-logo.svg" alt="DevConnect Logo">
+      <img class="logo" src="${logoUrl}" alt="DevConnect Logo">
     </nav>
   </header>
   <main>
