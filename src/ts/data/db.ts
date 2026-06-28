@@ -49,7 +49,7 @@ export const developpeurs: Developpeur[]= [
         specialite: "Developpeur Front-end",
         outils: ["HTML5", "CSS3", "JavaScript", "Figma", "TypeScript", "Vite", "GitHub", "Git"],
         image: "../assets/img/Fatou.png",
-        lienPortfolio: "https://fatim007.github.io/Portfolio/",
+        lienPortfolio: "https://fatim007.github.io/Portofolio/",
     },
     {
         nom: "Jeannisca NGUINA",
